@@ -1,4 +1,29 @@
 .data-display {
     display: grid;
+    grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 120px auto auto;
+    gap: 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    gap: 1rem;
+}
+
+.card > img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card {
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.card.show {
+    transform: scale(1);
 }
