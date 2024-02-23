@@ -39,7 +39,7 @@ $(document).ready(() => {
 
     // fetching the data json file
     $.ajax({
-        url: 'https://github.com/Benjihunt97/REST-counry-API/blob/main/data.json',
+        url: 'data.json',
         dataType: "json",
         success: function (data) {
             let flag = data.flags.svg;
