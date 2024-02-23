@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body class="bg-gray-100">
+
+    <div class="">
+        <header class="sticky top-0 left-0 flex justify-between items-center p-5 shadow-lg bg-white">
+            <h1 class="font-bold text-2xl">Where in the world?</h1>
+
+            <div class="flex items-center gap-4">
+                <button class="toggle-theme relative grid place-items-center w-[40px] h-[40px] border-2 border-slate-900 rounded-full overflow-hidden bg-slate-900 transition-all duration-500">
+        <span id="dark" class="absolute transition-all duration-500 top-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="26" height="26"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+            </svg>
+        </span>
+        <span id="light" class="absolute transition-all duration-500 -bottom-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-high" width="26" height="26"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#0f172a" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />
+                <path d="M6.343 17.657l-1.414 1.414" />
+                <path d="M6.343 6.343l-1.414 -1.414" />
+                <path d="M17.657 6.343l1.414 -1.414" />
+                <path d="M17.657 17.657l1.414 1.414" />
+                <path d="M4 12h-2" />
+                <path d="M12 4v-2" />
+                <path d="M20 12h2" />
+                <path d="M12 20v2" />
+            </svg>
+        </span>
+                </button>
+            </div>
+        </header>
+
+        <div class="p-5 py-10">
+
+            <!-- search function -->
+            <div class="flex sm:items-center gap-3 flex-col sm:flex-row sm:justify-between">
+                <div class="bg-white rounded-md px-4 py-2 w-full sm:w-fit text-sm shadow-md">
+                    <input type="search" class="focus:outline-none" placeholder="Search Country">
+                </div>
+
+                <div class="relative">
+                    <button class="flex items-center justify-between text-sm bg-white w-full sm:w-[170px] rounded-md py-2 px-4" id="show-regions">
+                        Filter by Region
+                        <svg xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300"  width="22" height="22"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 6l-6 6l6 6" />
+                        </svg>
+                    </button>
+
+                    <div class="absolute filter-display bg-white w-full rounded-md overflow-y-scroll top-12 text-sm h-0 transition-all duration-300 ">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- data display -->
+            <div class="mt-16 data-display">
+                
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
